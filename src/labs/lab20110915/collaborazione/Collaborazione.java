@@ -1,9 +1,9 @@
-package lab20110915.collaborazione;
+package labs.lab20110915.collaborazione;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-import lab20110915.autori.Autore;
+import labs.lab20110915.autori.Autore;
 
 public class Collaborazione implements Comparable<Collaborazione> {
 

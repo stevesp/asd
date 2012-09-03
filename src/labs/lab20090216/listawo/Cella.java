@@ -1,4 +1,4 @@
-package lab20090216.listawo;
+package labs.lab20090216.listawo;
 
 
 class Cella {

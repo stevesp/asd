@@ -1,6 +1,6 @@
-package lab20100902;
+package labs.lab20100902;
 
-import lab20100902.index.IndexGenerator;
+import labs.lab20100902.index.IndexGenerator;
 
 public class Test {
 

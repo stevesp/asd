@@ -1,4 +1,4 @@
-package lab20110712.treep;
+package labs.lab20110712.treep;
 
 public class NodoInesistente extends RuntimeException {
 

@@ -1,7 +1,7 @@
-package lab20100712.pql;
+package labs.lab20100712.pql;
 
-import lab20100712.pq.EccezionePrioritaNonValida;
-import lab20100712.pq.Priority;
+import labs.lab20100712.pq.EccezionePrioritaNonValida;
+import labs.lab20100712.pq.Priority;
 
 public class Process {
 	

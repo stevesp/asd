@@ -1,4 +1,4 @@
-package lab20100902.index;
+package labs.lab20100902.index;
 
 public class Valore implements Comparable<Valore> {
 

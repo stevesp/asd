@@ -1,8 +1,8 @@
-package lab20111115.dizionario;
+package labs.lab20111115.dizionario;
 
 import java.util.Iterator;
 
-import lab20111115.dizionario.LinkedDict.Record;
+import labs.lab20111115.dizionario.LinkedDict.Record;
 
 public class LinkedDictIterator<S> implements Iterator<S> {
     private Record current;

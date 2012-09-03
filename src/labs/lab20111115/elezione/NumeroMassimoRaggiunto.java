@@ -1,4 +1,4 @@
-package lab20111115.elezione;
+package labs.lab20111115.elezione;
 
 public class NumeroMassimoRaggiunto extends RuntimeException {
 	public NumeroMassimoRaggiunto(String messaggioErrore) {

@@ -1,12 +1,12 @@
-package lab20110614;
+package labs.lab20110614;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import lab20110614.referendum.Quesito;
-import lab20110614.referendum.Referendum;
-import lab20110614.referendum.Voto;
+import labs.lab20110614.referendum.Quesito;
+import labs.lab20110614.referendum.Referendum;
+import labs.lab20110614.referendum.Voto;
 
 public class Test {
 

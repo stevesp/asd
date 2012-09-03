@@ -1,4 +1,4 @@
-package lab20110614.dizionario;
+package labs.lab20110614.dizionario;
 
 class Coppia<S>{
 	S elem;

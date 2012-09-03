@@ -1,12 +1,12 @@
-package lab20110712.treep;
+package labs.lab20110712.treep;
 
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-import lab20110712.tree.Albero;
-import lab20110712.tree.Nodo;
-import lab20110712.tree.Tipovisita;
+import labs.lab20110712.tree.Albero;
+import labs.lab20110712.tree.Nodo;
+import labs.lab20110712.tree.Tipovisita;
 
 public class AlberoPIterator<T> implements Iterator<T> {
 		

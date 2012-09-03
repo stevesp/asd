@@ -1,4 +1,4 @@
-package lab20120117.articoli;
+package labs.lab20120117.articoli;
 
 public class Sapone extends Igiene {
 

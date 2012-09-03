@@ -1,7 +1,7 @@
-package lab20110614.referendum;
+package labs.lab20110614.referendum;
 
-import lab20110614.dizionario.ArrayOrdinato;
-import lab20110614.dizionario.Dictionary;
+import labs.lab20110614.dizionario.ArrayOrdinato;
+import labs.lab20110614.dizionario.Dictionary;
 
 public class Referendum {
 	protected Dictionary<Quesito<Voto>> referendum;

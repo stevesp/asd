@@ -1,6 +1,6 @@
-package lab20120210.frazioni;
+package labs.lab20120210.frazioni;
 
-import lab20120210.orologio.Event;
+import labs.lab20120210.orologio.Event;
 
 public class Minuto extends Frazione {
 	

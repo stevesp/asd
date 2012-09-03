@@ -1,4 +1,4 @@
-package lab20111115.dizionario;
+package labs.lab20111115.dizionario;
 
 import java.util.Iterator;
 

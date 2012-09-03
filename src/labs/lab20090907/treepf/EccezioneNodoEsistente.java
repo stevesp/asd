@@ -1,4 +1,4 @@
-package lab20090907.treepf;
+package labs.lab20090907.treepf;
 
 public class EccezioneNodoEsistente extends RuntimeException {
 

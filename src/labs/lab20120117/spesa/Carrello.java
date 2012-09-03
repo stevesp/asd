@@ -1,8 +1,8 @@
-package lab20120117.spesa;
+package labs.lab20120117.spesa;
 
 import java.util.Iterator;
 
-import lab20120117.list.AddOnlyList;
+import labs.lab20120117.list.AddOnlyList;
 
 public class Carrello implements AddOnlyList<Item>, Iterable<Item> {
 

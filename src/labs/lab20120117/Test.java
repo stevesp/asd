@@ -1,11 +1,11 @@
-package lab20120117;
+package labs.lab20120117;
 
 import java.util.Random;
 
-import lab20120117.articoli.*;
-import lab20120117.spesa.Carrello;
-import lab20120117.spesa.Item;
-import lab20120117.spesa.MarketBasketAnalysis;
+import labs.lab20120117.articoli.*;
+import labs.lab20120117.spesa.Carrello;
+import labs.lab20120117.spesa.Item;
+import labs.lab20120117.spesa.MarketBasketAnalysis;
 
 public class Test {
 	public static void main(String[] args){

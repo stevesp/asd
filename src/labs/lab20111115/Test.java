@@ -1,11 +1,11 @@
-package lab20111115;
+package labs.lab20111115;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import lab20111115.elezione.Elezione;
-import lab20111115.elezione.ListaElettorale;
-import lab20111115.elezione.Voto;
+import labs.lab20111115.elezione.Elezione;
+import labs.lab20111115.elezione.ListaElettorale;
+import labs.lab20111115.elezione.Voto;
 
 public class Test {
 

@@ -1,4 +1,4 @@
-package lab20100916.pila;
+package labs.lab20100916.pila;
 
 public interface Pila<T> extends Iterable<T>{
 	

@@ -1,4 +1,4 @@
-package lab20090907.tree;
+package labs.lab20090907.tree;
 
 public interface ABE {
 	public boolean ABEVuoto();

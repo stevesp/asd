@@ -1,8 +1,8 @@
-package lab20090907;
+package labs.lab20090907;
 
-import lab20090907.tree.ABE;
-import lab20090907.treepf.ABEPF;
-import lab20090907.treepf.NodoPF;
+import labs.lab20090907.tree.ABE;
+import labs.lab20090907.treepf.ABEPF;
+import labs.lab20090907.treepf.NodoPF;
 
 public class AlberoDecisione {
 	

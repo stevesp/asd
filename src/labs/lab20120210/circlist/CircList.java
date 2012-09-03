@@ -1,4 +1,4 @@
-package lab20120210.circlist;
+package labs.lab20120210.circlist;
 
 public interface CircList<S> extends Iterable<S> {
 

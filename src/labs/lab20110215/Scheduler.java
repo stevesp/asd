@@ -1,9 +1,9 @@
-package lab20110215;
+package labs.lab20110215;
 
-import lab20110215.circlist.CircList;
-import lab20110215.circlist.Direction;
-import lab20110215.circlist.ListCircDL;
-import lab20110215.processo.Processo;
+import labs.lab20110215.circlist.CircList;
+import labs.lab20110215.circlist.Direction;
+import labs.lab20110215.circlist.ListCircDL;
+import labs.lab20110215.processo.Processo;
 
 public class Scheduler {
 

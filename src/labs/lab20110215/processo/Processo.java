@@ -1,4 +1,4 @@
-package lab20110215.processo;
+package labs.lab20110215.processo;
 
 import java.util.Random;
 

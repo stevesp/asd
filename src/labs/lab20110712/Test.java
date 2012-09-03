@@ -1,9 +1,9 @@
-package lab20110712;
+package labs.lab20110712;
 
-import lab20110712.tree.Albero;
-import lab20110712.tree.Nodo;
-import lab20110712.treep.AlberoP;
-import lab20110712.treep.NodoP;
+import labs.lab20110712.tree.Albero;
+import labs.lab20110712.tree.Nodo;
+import labs.lab20110712.treep.AlberoP;
+import labs.lab20110712.treep.NodoP;
 
 public class Test {
 	

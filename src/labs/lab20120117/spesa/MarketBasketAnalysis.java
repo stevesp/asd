@@ -1,4 +1,4 @@
-package lab20120117.spesa;
+package labs.lab20120117.spesa;
 
 import java.util.HashMap;
 

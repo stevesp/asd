@@ -1,4 +1,4 @@
-package lab20110614.referendum;
+package labs.lab20110614.referendum;
 
 public class QuesitoNonEsistente extends RuntimeException {
 

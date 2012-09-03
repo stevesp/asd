@@ -1,4 +1,4 @@
-package lab20100902.abr;
+package labs.lab20100902.abr;
 
 public interface ABR extends Iterable {
 	public boolean nuovoABR();

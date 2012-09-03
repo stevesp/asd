@@ -1,10 +1,10 @@
-package lab20100222.listaarray;
+package labs.lab20100222.listaarray;
 
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Random;
 
-import lab20100222.listaindicizzata.ListaIndicizzata;
+import labs.lab20100222.listaindicizzata.ListaIndicizzata;
 
 public class ListaArray<T> implements ListaIndicizzata<T> {
 

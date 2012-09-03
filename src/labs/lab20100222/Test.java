@@ -1,13 +1,13 @@
-package lab20100222;
+package labs.lab20100222;
 
 import java.util.Random;
 
-import lab20100222.layout.Block;
-import lab20100222.layout.EccezionePosizioneNonCorretta;
-import lab20100222.layout.Layout;
-import lab20100222.layout.Point2D;
-import lab20100222.layout.TypeC;
-import lab20100222.listaarray.EccezionePosizioneOccupata;
+import labs.lab20100222.layout.Block;
+import labs.lab20100222.layout.EccezionePosizioneNonCorretta;
+import labs.lab20100222.layout.Layout;
+import labs.lab20100222.layout.Point2D;
+import labs.lab20100222.layout.TypeC;
+import labs.lab20100222.listaarray.EccezionePosizioneOccupata;
 
 public class Test {
 

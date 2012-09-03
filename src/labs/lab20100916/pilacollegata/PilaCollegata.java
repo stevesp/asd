@@ -1,8 +1,8 @@
-package lab20100916.pilacollegata;
+package labs.lab20100916.pilacollegata;
 
 import java.util.Iterator;
 
-import lab20100916.pila.Pila;
+import labs.lab20100916.pila.Pila;
 
 public class PilaCollegata<T> implements Pila<T> {
 	

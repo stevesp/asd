@@ -1,10 +1,10 @@
-package lab20100222.layout;
+package labs.lab20100222.layout;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import lab20100222.listaarray.ListaArray;
-import lab20100222.listaindicizzata.ListaIndicizzata;
+import labs.lab20100222.listaarray.ListaArray;
+import labs.lab20100222.listaindicizzata.ListaIndicizzata;
 
 public class Layout {
 	

@@ -1,6 +1,6 @@
-package lab20111115.elezione;
+package labs.lab20111115.elezione;
 
-import lab20111115.Persona;
+import labs.lab20111115.Persona;
 
 public class Candidato implements Persona {
 

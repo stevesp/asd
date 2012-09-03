@@ -1,4 +1,4 @@
-package lab20100916.pilacollegata;
+package labs.lab20100916.pilacollegata;
 
 public class EccezionePilaVuota extends RuntimeException {
 

@@ -1,8 +1,8 @@
-package lab20090216.listawo;
+package labs.lab20090216.listawo;
 
 import java.util.Iterator;
 
-import lab20090216.lista.ListaOrdinata;
+import labs.lab20090216.lista.ListaOrdinata;
 
 public class WOListLinked implements ListaOrdinata {
 

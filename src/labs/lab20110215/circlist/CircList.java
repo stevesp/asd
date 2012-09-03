@@ -1,4 +1,4 @@
-package lab20110215.circlist;
+package labs.lab20110215.circlist;
 
 public interface CircList<T> extends Iterable<T>{
 	public void addCircList(T object);

@@ -1,4 +1,4 @@
-package lab20100222.listaarray;
+package labs.lab20100222.listaarray;
 
 public class EccezionePosizioneOccupata extends RuntimeException {
 

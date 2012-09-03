@@ -1,10 +1,10 @@
-package lab20100712.codall;
+package labs.lab20100712.codall;
 
 import java.util.LinkedList;
 
-import lab20100712.pq.PQ;
-import lab20100712.pq.Priority;
-import lab20100712.pql.PQL;
+import labs.lab20100712.pq.PQ;
+import labs.lab20100712.pq.Priority;
+import labs.lab20100712.pql.PQL;
 
 public class CodaLL<Item> extends PQL<Item> {
 	

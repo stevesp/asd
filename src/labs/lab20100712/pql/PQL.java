@@ -1,10 +1,10 @@
-package lab20100712.pql;
+package labs.lab20100712.pql;
 
 import java.util.List;
 
-import lab20100712.pq.EccezionePrioritaNonValida;
-import lab20100712.pq.PQ;
-import lab20100712.pq.Priority;
+import labs.lab20100712.pq.EccezionePrioritaNonValida;
+import labs.lab20100712.pq.PQ;
+import labs.lab20100712.pq.Priority;
 
 public abstract class PQL<Item> implements PQ<Item> {
 

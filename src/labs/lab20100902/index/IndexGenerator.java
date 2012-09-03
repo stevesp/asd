@@ -1,7 +1,7 @@
-package lab20100902.index;
+package labs.lab20100902.index;
 
-import lab20100902.abr.ABR;
-import lab20100902.abrpf.ABRPF;
+import labs.lab20100902.abr.ABR;
+import labs.lab20100902.abrpf.ABRPF;
 
 public class IndexGenerator {
 	

@@ -1,11 +1,11 @@
-package lab20111115.elezione;
+package labs.lab20111115.elezione;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import lab20111115.dizionario.Dictionary;
-import lab20111115.dizionario.LinkedDict;
+import labs.lab20111115.dizionario.Dictionary;
+import labs.lab20111115.dizionario.LinkedDict;
 
 public class Elezione {
 	

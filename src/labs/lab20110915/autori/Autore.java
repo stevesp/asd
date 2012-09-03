@@ -1,4 +1,4 @@
-package lab20110915.autori;
+package labs.lab20110915.autori;
 
 public class Autore implements Comparable<Autore> {
 	private String nome, cognome, affiliazione;

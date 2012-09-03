@@ -1,6 +1,6 @@
-package lab20120117.spesa;
+package labs.lab20120117.spesa;
 
-import lab20120117.articoli.Articolo;
+import labs.lab20120117.articoli.Articolo;
 
 public class Item {
 	

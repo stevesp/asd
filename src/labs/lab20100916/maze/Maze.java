@@ -1,8 +1,8 @@
-package lab20100916.maze;
+package labs.lab20100916.maze;
 
 import java.util.Random;
 
-import lab20100916.pilacollegata.PilaCollegata;
+import labs.lab20100916.pilacollegata.PilaCollegata;
 
 public class Maze {
 

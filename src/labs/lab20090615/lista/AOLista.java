@@ -1,4 +1,4 @@
-package lab20090615.lista;
+package labs.lab20090615.lista;
 
 public interface AOLista {
 

@@ -1,9 +1,9 @@
-package lab20090615;
+package labs.lab20090615;
 
-import lab20090615.lista.AOLista;
-import lab20090615.lista.EccezioneListaVuota;
-import lab20090615.lista.Posizione;
-import lab20090615.lista.WODoubleLinkedList;
+import labs.lab20090615.lista.AOLista;
+import labs.lab20090615.lista.EccezioneListaVuota;
+import labs.lab20090615.lista.Posizione;
+import labs.lab20090615.lista.WODoubleLinkedList;
 
 public class Test {
 

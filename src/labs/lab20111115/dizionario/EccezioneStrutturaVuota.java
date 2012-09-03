@@ -1,4 +1,4 @@
-package lab20111115.dizionario;
+package labs.lab20111115.dizionario;
 
 public class EccezioneStrutturaVuota extends RuntimeException {
 	public EccezioneStrutturaVuota(String messaggioErrore) {

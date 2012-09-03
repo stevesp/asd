@@ -1,4 +1,4 @@
-package lab20100712.pq;
+package labs.lab20100712.pq;
 
 public class EccezionePrioritaNonValida extends RuntimeException {
 

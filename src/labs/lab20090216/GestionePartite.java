@@ -1,4 +1,4 @@
-package lab20090216;
+package labs.lab20090216;
 
 import java.util.Calendar;
 import java.util.Date;

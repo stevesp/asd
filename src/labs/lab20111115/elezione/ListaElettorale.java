@@ -1,4 +1,4 @@
-package lab20111115.elezione;
+package labs.lab20111115.elezione;
 
 import java.util.List;
 

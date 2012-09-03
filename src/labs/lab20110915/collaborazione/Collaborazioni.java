@@ -1,12 +1,12 @@
-package lab20110915.collaborazione;
+package labs.lab20110915.collaborazione;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-import lab20110915.autori.Autore;
-import lab20110915.autori.Autori;
+import labs.lab20110915.autori.Autore;
+import labs.lab20110915.autori.Autori;
 
 public class Collaborazioni implements Iterable<Collaborazione>{
 

@@ -1,4 +1,4 @@
-package lab20110712.tree;
+package labs.lab20110712.tree;
 
 public interface Albero<T> extends Iterable<T>{
 	public boolean alberoVuoto();

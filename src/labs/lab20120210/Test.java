@@ -1,6 +1,6 @@
-package lab20120210;
+package labs.lab20120210;
 
-import lab20120210.orologio.OrologioDaPolso;
+import labs.lab20120210.orologio.OrologioDaPolso;
 
 public class Test {
 

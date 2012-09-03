@@ -1,12 +1,12 @@
-package lab20100712;
+package labs.lab20100712;
 
 import java.util.Random;
 
-import lab20100712.codall.CodaLL;
-import lab20100712.pq.EccezionePrioritaNonValida;
-import lab20100712.pq.PQ;
-import lab20100712.pq.Priority;
-import lab20100712.pql.Process;
+import labs.lab20100712.codall.CodaLL;
+import labs.lab20100712.pq.EccezionePrioritaNonValida;
+import labs.lab20100712.pq.PQ;
+import labs.lab20100712.pq.Priority;
+import labs.lab20100712.pql.Process;
 
 public class Test {
 

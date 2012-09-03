@@ -1,4 +1,4 @@
-package lab20110915;
+package labs.lab20110915;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
-import lab20110915.autori.Autore;
-import lab20110915.autori.Autori;
-import lab20110915.collaborazione.Collaborazione;
-import lab20110915.collaborazione.Collaborazioni;
+import labs.lab20110915.autori.Autore;
+import labs.lab20110915.autori.Autori;
+import labs.lab20110915.collaborazione.Collaborazione;
+import labs.lab20110915.collaborazione.Collaborazioni;
 
 public class TestFabio {
 

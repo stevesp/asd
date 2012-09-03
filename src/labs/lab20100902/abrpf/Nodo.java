@@ -1,4 +1,4 @@
-package lab20100902.abrpf;
+package labs.lab20100902.abrpf;
 
 public class Nodo {
 	

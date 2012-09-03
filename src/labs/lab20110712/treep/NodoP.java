@@ -1,6 +1,6 @@
-package lab20110712.treep;
+package labs.lab20110712.treep;
 
-import lab20110712.tree.Nodo;
+import labs.lab20110712.tree.Nodo;
 
 public class NodoP<T> implements Nodo<T> {
 	

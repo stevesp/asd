@@ -1,4 +1,4 @@
-package lab20111115.dizionario;
+package labs.lab20111115.dizionario;
 
 public interface Dictionary<S> extends Iterable<S> {
 	public void insert(S e, Comparable k);

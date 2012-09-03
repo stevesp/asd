@@ -1,6 +1,6 @@
-package lab20120210.orologio;
+package labs.lab20120210.orologio;
 
-import lab20120210.frazioni.*;
+import labs.lab20120210.frazioni.*;
 
 public class OrologioDaPolso {
 

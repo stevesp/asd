@@ -1,8 +1,8 @@
-package lab20120210.orologio;
+package labs.lab20120210.orologio;
 
 import java.util.Iterator;
 
-import lab20120210.circlist.CircList;
+import labs.lab20120210.circlist.CircList;
 
 public class Orologio<S> implements CircList<S> {
 

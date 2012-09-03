@@ -1,4 +1,4 @@
-package lab20120210.orologio;
+package labs.lab20120210.orologio;
 
 import java.util.Iterator;
 

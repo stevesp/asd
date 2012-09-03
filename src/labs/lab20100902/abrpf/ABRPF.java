@@ -1,8 +1,8 @@
-package lab20100902.abrpf;
+package labs.lab20100902.abrpf;
 
 import java.util.Iterator;
 
-import lab20100902.abr.ABR;
+import labs.lab20100902.abr.ABR;
 
 public class ABRPF implements ABR {
 

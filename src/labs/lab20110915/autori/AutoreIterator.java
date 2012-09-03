@@ -1,4 +1,4 @@
-package lab20110915.autori;
+package labs.lab20110915.autori;
 
 import java.util.Iterator;
 

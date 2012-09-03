@@ -1,4 +1,4 @@
-package lab20100222.listaindicizzata;
+package labs.lab20100222.listaindicizzata;
 
 public interface ListaIndicizzata<T> extends Iterable<T> {
 	

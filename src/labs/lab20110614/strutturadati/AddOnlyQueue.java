@@ -1,4 +1,4 @@
-package lab20110614.strutturadati;
+package labs.lab20110614.strutturadati;
 
 public interface AddOnlyQueue<T> {
 	public void add(T dato);

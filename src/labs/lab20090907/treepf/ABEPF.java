@@ -1,7 +1,7 @@
-package lab20090907.treepf;
+package labs.lab20090907.treepf;
 
-import lab20090907.tree.ABE;
-import lab20090907.tree.Nodo;
+import labs.lab20090907.tree.ABE;
+import labs.lab20090907.tree.Nodo;
 
 public class ABEPF implements ABE {
 	

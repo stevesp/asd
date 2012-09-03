@@ -1,8 +1,8 @@
-package lab20110614.referendum;
+package labs.lab20110614.referendum;
 
 import java.util.Arrays;
 
-import lab20110614.strutturadati.AddOnlyQueue;
+import labs.lab20110614.strutturadati.AddOnlyQueue;
 
 public class Quesito<T> implements AddOnlyQueue<T>{
 

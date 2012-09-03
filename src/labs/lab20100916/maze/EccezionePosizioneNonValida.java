@@ -1,4 +1,4 @@
-package lab20100916.maze;
+package labs.lab20100916.maze;
 
 public class EccezionePosizioneNonValida extends RuntimeException {
 
