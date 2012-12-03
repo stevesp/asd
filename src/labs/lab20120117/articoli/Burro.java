@@ -4,5 +4,5 @@ public class Burro extends Alimenti {
 
 	public Burro() {
 	}
-	
+
 }

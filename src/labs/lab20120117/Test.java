@@ -2,49 +2,52 @@ package labs.lab20120117;
 
 import java.util.Random;
 
-import labs.lab20120117.articoli.*;
+import labs.lab20120117.articoli.Articolo;
+import labs.lab20120117.articoli.Burro;
+import labs.lab20120117.articoli.Cereali;
+import labs.lab20120117.articoli.Dentifricio;
+import labs.lab20120117.articoli.Pane;
+import labs.lab20120117.articoli.Piatti;
+import labs.lab20120117.articoli.Sapone;
+import labs.lab20120117.articoli.Spaghetti;
+import labs.lab20120117.articoli.Tovagliolini;
 import labs.lab20120117.spesa.Carrello;
 import labs.lab20120117.spesa.Item;
 import labs.lab20120117.spesa.MarketBasketAnalysis;
 
 public class Test {
-	public static void main(String[] args){
-		
-		Articolo[] articoli = new Articolo[]{new Pane(),
-											 new Burro(),
-											 new Spaghetti(),
-											 new Cereali(),
-											 new Sapone(),
-											 new Dentifricio(),
-											 new Tovagliolini(),
-											 new Piatti()};
-		
+	public static void main(String[] args) {
+
+		Articolo[] articoli = new Articolo[] { new Pane(), new Burro(),
+				new Spaghetti(), new Cereali(), new Sapone(),
+				new Dentifricio(), new Tovagliolini(), new Piatti() };
+
 		Carrello[] carrelli = new Carrello[10];
-		
+
 		Random rndNumElementi = new Random();
 		Random rndQuantita = new Random();
-		
-		for(int i=0; i<carrelli.length; i++){
+
+		for (int i = 0; i < carrelli.length; i++) {
 			carrelli[i] = new Carrello();
 			if (i % 2 == 0)
 				carrelli[i].backward();
 			else
 				carrelli[i].forward();
-			
+
 			int numElementi = 0;
-			while(numElementi < 1)
+			while (numElementi < 1)
 				numElementi = rndNumElementi.nextInt(articoli.length + 1) + 1;
-				
-			for(int j = 0; j < numElementi; j++){
+
+			for (int j = 0; j < numElementi; j++) {
 				int quantita = rndQuantita.nextInt(6) + 1;
-				carrelli[i].add(new Item(articoli[j],quantita));
+				carrelli[i].add(new Item(articoli[j], quantita));
 			}
 		}
-		
+
 		MarketBasketAnalysis m = new MarketBasketAnalysis();
-		
-		for(int i=0; i < carrelli.length; i++){
-			System.out.println("Carrello "+(i+1)+": ");
+
+		for (int i = 0; i < carrelli.length; i++) {
+			System.out.println("Carrello " + (i + 1) + ": ");
 			m.add(carrelli[i]);
 		}
 

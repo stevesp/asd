@@ -1,6 +1,6 @@
 package stacks;
 
-import exceptions.EccezioneStrutturaVuota;
+import commons.EccezioneStrutturaVuota;
 
 public class PilaArray implements Pila {
 
@@ -28,17 +28,17 @@ public class PilaArray implements Pila {
 	public Object top() throws EccezioneStrutturaVuota {
 		if (isEmpty())
 			throw new EccezioneStrutturaVuota("Pila vuota");
-		
-		return S[n-1];
+
+		return S[n - 1];
 	}
 
 	@Override
 	public void pop() throws EccezioneStrutturaVuota {
 		if (isEmpty())
 			throw new EccezioneStrutturaVuota("Pila vuota");
-		
-		if (n <= S.length/4) {
-			Object[] temp = new Object[S.length/2];
+
+		if (n <= S.length / 4) {
+			Object[] temp = new Object[S.length / 2];
 			for (int i = 0; i < n; i++)
 				temp[i] = S[i];
 			S = temp;

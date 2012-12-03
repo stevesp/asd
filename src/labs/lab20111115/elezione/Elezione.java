@@ -8,12 +8,12 @@ import labs.lab20111115.dizionario.Dictionary;
 import labs.lab20111115.dizionario.LinkedDict;
 
 public class Elezione {
-	
-	private class Coppia implements Comparable<Coppia>{
+
+	private class Coppia implements Comparable<Coppia> {
 		private Integer voto;
 		private ListaElettorale lista;
-		
-		private Coppia(Integer voto, ListaElettorale lista){
+
+		private Coppia(Integer voto, ListaElettorale lista) {
 			this.voto = voto;
 			this.lista = lista;
 		}
@@ -22,16 +22,16 @@ public class Elezione {
 		public int compareTo(Coppia o) {
 			return this.voto.compareTo(o.voto);
 		}
-		
-		private Integer getVoto(){
+
+		private Integer getVoto() {
 			return this.voto;
 		}
-		
-		private ListaElettorale getLista(){
+
+		private ListaElettorale getLista() {
 			return this.lista;
 		}
 	}
-	
+
 	private int votanti;
 	private int numvoti;
 	private int schedeNulle;
@@ -63,7 +63,7 @@ public class Elezione {
 			schedeBianche++;
 		else {
 			ListaElettorale corrente = v.voto();
-			
+
 			Integer numeroVoti = listeElettorali.search(corrente);
 			listeElettorali.delete(corrente);
 			listeElettorali.insert(numeroVoti + 1, corrente);
@@ -86,13 +86,13 @@ public class Elezione {
 
 	public void elencoOrdinato() {
 		List<Coppia> ordina = new ArrayList<Coppia>();
-		
-		for(ListaElettorale l: this.liste)
-			ordina.add(new Coppia(listeElettorali.search(l),l));
-		
+
+		for (ListaElettorale l : this.liste)
+			ordina.add(new Coppia(listeElettorali.search(l), l));
+
 		Collections.sort(ordina);
-		
-		for(Coppia c: ordina)
-			System.out.println(c.getVoto() +" "+c.getLista());
-	}	
+
+		for (Coppia c : ordina)
+			System.out.println(c.getVoto() + " " + c.getLista());
+	}
 }

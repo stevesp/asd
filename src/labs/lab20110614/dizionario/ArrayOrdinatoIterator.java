@@ -3,12 +3,12 @@ package labs.lab20110614.dizionario;
 import java.util.Iterator;
 
 public class ArrayOrdinatoIterator<S> implements Iterator<S> {
-	
+
 	private Coppia<S>[] lista;
 	private int n;
 	private int current;
 
-	public ArrayOrdinatoIterator(Coppia<S>[] element, int size){
+	public ArrayOrdinatoIterator(Coppia<S>[] element, int size) {
 		this.lista = element;
 		this.n = size;
 		this.current = 0;
@@ -26,6 +26,6 @@ public class ArrayOrdinatoIterator<S> implements Iterator<S> {
 
 	@Override
 	public void remove() throws UnsupportedOperationException {
-		throw new UnsupportedOperationException();	
+		throw new UnsupportedOperationException();
 	}
 }

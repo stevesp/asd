@@ -9,17 +9,17 @@ public class ListDoubling implements Lista, Iterable<Object> {
 
 	private Object[] L = new Object[1];
 	private int n = 0;
-	
+
 	@Override
-	public boolean isEmpty(){
+	public boolean isEmpty() {
 		return n == 0;
 	}
 
 	@Override
 	public boolean endList(Posizione p) {
-	    return ((Indice) p).indice == n;
+		return ((Indice) p).indice == n;
 	}
-  
+
 	@Override
 	public Posizione firstList() {
 		return new Indice();
@@ -42,7 +42,7 @@ public class ListDoubling implements Lista, Iterable<Object> {
 		else
 			return true;
 	}
-	
+
 	@Override
 	public Object readList(Posizione p) {
 		if (!checkPosition(p) && !endList(p))
@@ -52,26 +52,28 @@ public class ListDoubling implements Lista, Iterable<Object> {
 
 	@Override
 	public void insert(Object e, Posizione p) {
-		 if (!checkPosition(p))
-			 throw new IndexOutOfBoundsException("Posizione di inserimento non valida");
-		 
-		 for (int i = n; i > ((Indice)p).indice; i--)
-			 L[i]=L[i-1];
-		 L[((Indice) p).indice] = e;
-		 n++;
-		 if (n == L.length) {
-			 Object[] temp = new Object[2 * L.length];
-			 for (Indice pos=(Indice) firstList(); !endList(pos); pos=(Indice) succ(pos))
-				 temp[pos.indice] = L[pos.indice];
-			 L = temp;
-		 }
+		if (!checkPosition(p))
+			throw new IndexOutOfBoundsException(
+					"Posizione di inserimento non valida");
+
+		for (int i = n; i > ((Indice) p).indice; i--)
+			L[i] = L[i - 1];
+		L[((Indice) p).indice] = e;
+		n++;
+		if (n == L.length) {
+			Object[] temp = new Object[2 * L.length];
+			for (Indice pos = (Indice) firstList(); !endList(pos); pos = (Indice) succ(pos))
+				temp[pos.indice] = L[pos.indice];
+			L = temp;
+		}
 	}
 
 	/*
 	 * (non-Javadoc)
-	 * @see Lista#pred(Posizione)
-	 *  se p coincide con la posizione del primo elemento della lista sollevo IndexOutOfBoundsException
-	 *  altrimenti restituisco la posizione antecedente a p 
+	 * 
+	 * @see Lista#pred(Posizione) se p coincide con la posizione del primo
+	 * elemento della lista sollevo IndexOutOfBoundsException altrimenti
+	 * restituisco la posizione antecedente a p
 	 */
 	@Override
 	public Posizione pred(Posizione p) {
@@ -86,26 +88,26 @@ public class ListDoubling implements Lista, Iterable<Object> {
 
 	/*
 	 * (non-Javadoc)
-	 * @see Lista#remove(Posizione)
-	 * Se la posizione p non è valida sollevo una IndexOutOfBoundsException
-	 * altrimenti 
-	 * 1. cancello l'elemento in posizione ((Indice)p).indice di L (usare shift a sinistra)
-	 * 2. decremento n
-	 * 3. eventualmente dimezzo L in accordo alla tecnica del raddoppiamento/dimezzamento
- 	*/
+	 * 
+	 * @see Lista#remove(Posizione) Se la posizione p non è valida sollevo una
+	 * IndexOutOfBoundsException altrimenti 1. cancello l'elemento in posizione
+	 * ((Indice)p).indice di L (usare shift a sinistra) 2. decremento n 3.
+	 * eventualmente dimezzo L in accordo alla tecnica del
+	 * raddoppiamento/dimezzamento
+	 */
 	@Override
 	public void remove(Posizione p) {
 		if (!checkPosition(p))
 			throw new IndexOutOfBoundsException(((Indice) p).indice
 					+ "posizione non valida");
-		for (int i = ((Indice)p).indice; i < n; i++)
-			 L[i]=L[i+1];
-		L[n]=null;
+		for (int i = ((Indice) p).indice; i < n; i++)
+			L[i] = L[i + 1];
+		L[n] = null;
 		n--;
-		
-		if((n>1) && (n<=(L.length/4))){
-			Object[] temp = new Object[L.length/2];
-			for (Indice pos=(Indice) firstList(); !endList(pos); pos=(Indice) succ(pos))
+
+		if ((n > 1) && (n <= (L.length / 4))) {
+			Object[] temp = new Object[L.length / 2];
+			for (Indice pos = (Indice) firstList(); !endList(pos); pos = (Indice) succ(pos))
 				temp[pos.indice] = L[pos.indice];
 			L = temp;
 		}
@@ -113,10 +115,11 @@ public class ListDoubling implements Lista, Iterable<Object> {
 
 	/*
 	 * (non-Javadoc)
-	 * @see Lista#writeList(java.lang.Object, Posizione)
-	 * Se la posizione p non è valida sollevo una IndexOutOfBoundsException
-	 * altrimenti scrivo in posizione ((Indice)p).indice di L l'elemento e
- 	*/
+	 * 
+	 * @see Lista#writeList(java.lang.Object, Posizione) Se la posizione p non è
+	 * valida sollevo una IndexOutOfBoundsException altrimenti scrivo in
+	 * posizione ((Indice)p).indice di L l'elemento e
+	 */
 	@Override
 	public void writeList(Object e, Posizione p) {
 		if (!checkPosition(p))
@@ -129,5 +132,5 @@ public class ListDoubling implements Lista, Iterable<Object> {
 	@Override
 	public Iterator<Object> iterator() {
 		return new DoublingIterator(this);
-	}	
+	}
 }

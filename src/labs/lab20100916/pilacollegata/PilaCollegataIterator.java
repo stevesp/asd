@@ -5,11 +5,11 @@ import java.util.Iterator;
 public class PilaCollegataIterator<T> implements Iterator<T> {
 
 	private Puntatore current;
-	
+
 	public PilaCollegataIterator(Puntatore firstList) {
 		this.current = firstList;
 	}
-	
+
 	@Override
 	public boolean hasNext() {
 		return current.link.successivo != null;

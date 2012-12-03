@@ -4,7 +4,7 @@ import labs.lab20090907.tree.ABE;
 import labs.lab20090907.tree.Nodo;
 
 public class NodoPF implements Nodo {
-	
+
 	NodoPF sin, des, padre;
 	ABE albero;
 	String eSin, eDes;

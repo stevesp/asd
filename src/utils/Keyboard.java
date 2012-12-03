@@ -1,4 +1,5 @@
 package utils;
+
 //********************************************************************
 //  Keyboard.java       Author: Lewis and Loftus
 //
@@ -6,8 +7,9 @@ package utils;
 //  parsing, conversions, and exception handling.
 //********************************************************************
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Keyboard {
 	// ************* Error Handling Section **************************

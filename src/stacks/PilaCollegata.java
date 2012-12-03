@@ -1,18 +1,18 @@
 package stacks;
 
-import exceptions.EccezioneStrutturaVuota;
+import commons.EccezioneStrutturaVuota;
 
 public class PilaCollegata implements Pila {
-	
+
 	private Record top = null;
-	
+
 	private class Record {
 		public Object elem;
 		public Record next;
 
-		public Record(Object e){
-			this.elem=e;
-			this.next=null;
+		public Record(Object e) {
+			this.elem = e;
+			this.next = null;
 		}
 	}
 

@@ -8,7 +8,7 @@ public class Partita implements Comparable<Partita> {
 	private Date data;
 	private String sqOspitante, sqOspitata;
 	private int retiOspitante, retiOspitata;
-	
+
 	public Partita(Date data, String sqOspitante, String sqOspitata,
 			int retiOspitante, int retiOspitata) {
 		this.data = data;
@@ -17,7 +17,7 @@ public class Partita implements Comparable<Partita> {
 		this.retiOspitante = retiOspitante;
 		this.retiOspitata = retiOspitata;
 	}
-	
+
 	public Date getData() {
 		return data;
 	}
@@ -40,20 +40,20 @@ public class Partita implements Comparable<Partita> {
 
 	@Override
 	public String toString() {
-		
+
 		StringBuffer buffer = new StringBuffer();
-		
+
 		buffer.append("Partita [ ");
-		
+
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(data);
-		buffer.append(cal.getTime() +", ");
-		
-		buffer.append(sqOspitante+" - "+sqOspitata+" ");
-		buffer.append(retiOspitante+" - "+retiOspitata);
-		
+		buffer.append(cal.getTime() + ", ");
+
+		buffer.append(sqOspitante + " - " + sqOspitata + " ");
+		buffer.append(retiOspitante + " - " + retiOspitata);
+
 		buffer.append(" ]");
-		
+
 		return buffer.toString();
 	}
 
@@ -61,7 +61,7 @@ public class Partita implements Comparable<Partita> {
 	public int compareTo(Partita partita) {
 		if (this.data.compareTo(partita.data) == 0)
 			return this.sqOspitante.compareTo(partita.sqOspitante);
-		
+
 		return (this.data.compareTo(partita.data));
 	}
 }

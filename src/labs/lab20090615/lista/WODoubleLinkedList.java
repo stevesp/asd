@@ -3,18 +3,18 @@ package labs.lab20090615.lista;
 public class WODoubleLinkedList implements AOLista {
 
 	private Elemento listHead = new Elemento(null);
-	
-	private class Elemento implements Posizione{
+
+	private class Elemento implements Posizione {
 		Object dato;
 		Elemento successivo;
 		Elemento precedente;
-		
-		Elemento(Object e){
+
+		Elemento(Object e) {
 			this.dato = e;
 			this.successivo = this.precedente = null;
 		}
 	}
-	
+
 	@Override
 	public Posizione firstList() {
 		return listHead;
@@ -22,12 +22,12 @@ public class WODoubleLinkedList implements AOLista {
 
 	@Override
 	public void insert(Object e, Posizione p) {
-		//TODO
-		//controllare che p sia una posizione valida
-		
+		// TODO
+		// controllare che p sia una posizione valida
+
 		Elemento q = new Elemento(e);
-		
-		if(listHead.successivo == null) {
+
+		if (listHead.successivo == null) {
 			listHead.successivo = listHead.precedente = q;
 			q.successivo = q.precedente = listHead;
 		} else {
@@ -42,7 +42,7 @@ public class WODoubleLinkedList implements AOLista {
 	public Posizione succ(Posizione p) {
 		if (listHead.successivo == null)
 			throw new EccezioneListaVuota("Lista vuota");
-		
+
 		if (endList(p))
 			return listHead;
 		else if (p == firstList())
@@ -55,8 +55,8 @@ public class WODoubleLinkedList implements AOLista {
 	public Posizione pred(Posizione p) {
 		if (listHead.successivo == null)
 			throw new EccezioneListaVuota("Lista vuota");
-		
-		if(p == firstList())
+
+		if (p == firstList())
 			return listHead.precedente;
 		else
 			return ((Elemento) p).precedente;
@@ -66,7 +66,7 @@ public class WODoubleLinkedList implements AOLista {
 	public boolean endList(Posizione p) {
 		if (listHead.successivo == null)
 			throw new EccezioneListaVuota("Lista vuota");
-		
+
 		return ((Elemento) p).successivo == listHead;
 	}
 
@@ -74,7 +74,7 @@ public class WODoubleLinkedList implements AOLista {
 	public Object readList(Posizione p) throws EccezioneListaVuota {
 		if (listHead.successivo == null)
 			throw new EccezioneListaVuota("Lista vuota");
-		
+
 		return ((Elemento) p).successivo.dato;
 	}
 

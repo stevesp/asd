@@ -9,7 +9,7 @@ import labs.lab20110712.tree.Nodo;
 import labs.lab20110712.tree.Tipovisita;
 
 public class AlberoPIterator<T> implements Iterator<T> {
-		
+
 	private Albero<T> ref;
 	private List<Nodo<T>> list;
 	private int i;
@@ -18,7 +18,7 @@ public class AlberoPIterator<T> implements Iterator<T> {
 		this.ref = ref;
 		this.list = new LinkedList<Nodo<T>>();
 		this.i = 0;
-		
+
 		switch (tipo) {
 		case PREVISITA:
 			previsita(ref.radice());
@@ -35,41 +35,41 @@ public class AlberoPIterator<T> implements Iterator<T> {
 	}
 
 	private void postvisita(Nodo<T> nodo) {
-		if(ref.foglia(nodo))
+		if (ref.foglia(nodo))
 			return;
-		
+
 		Nodo<T> v = ref.primoFiglio(nodo);
-		while(!ref.fineFratelli(v)){
+		while (!ref.fineFratelli(v)) {
 			postvisita(v);
 			v = ref.succFratello(v);
 		}
 		postvisita(v);
-		
+
 		list.add(nodo);
 	}
 
 	private void invisita(Nodo<T> nodo) {
-		if(ref.foglia(nodo))
+		if (ref.foglia(nodo))
 			list.add(nodo);
 		else {
 			Nodo<T> v = ref.primoFiglio(nodo);
 			invisita(v);
 			list.add(v);
-			while(!ref.fineFratelli(v)){
+			while (!ref.fineFratelli(v)) {
 				v = ref.succFratello(v);
 				invisita(v);
 			}
-		}		
+		}
 	}
 
 	private void previsita(Nodo<T> nodo) {
 		list.add(nodo);
-		
-		if(ref.foglia(nodo))
+
+		if (ref.foglia(nodo))
 			return;
-		
+
 		Nodo<T> v = ref.primoFiglio(nodo);
-		while(!ref.fineFratelli(v)){
+		while (!ref.fineFratelli(v)) {
 			previsita(v);
 			v = ref.succFratello(v);
 		}

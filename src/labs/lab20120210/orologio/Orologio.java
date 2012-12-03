@@ -8,12 +8,12 @@ public class Orologio<S> implements CircList<S> {
 
 	S[] array;
 	private int lancetta;
-	
+
 	public Orologio() {
 		this.array = (S[]) new Object[0];
 		this.lancetta = 0;
 	}
-	
+
 	@Override
 	public Iterator<S> iterator() {
 		return new OrologioIterator<S>(this);
@@ -31,7 +31,7 @@ public class Orologio<S> implements CircList<S> {
 	public S value() {
 		if (isEmpty())
 			throw new EccezioneOrologioVuoto();
-		
+
 		return array[lancetta];
 	}
 
@@ -44,7 +44,7 @@ public class Orologio<S> implements CircList<S> {
 	public void rotateF() {
 		if (isEmpty())
 			throw new EccezioneOrologioVuoto();
-		
+
 		lancetta++;
 		lancetta = lancetta % array.length;
 	}
@@ -56,10 +56,10 @@ public class Orologio<S> implements CircList<S> {
 
 	@Override
 	public boolean equals(CircList<S> s) {
-		for(int i=0; i < size(); i++)
-			if(! array[i].equals(((Orologio<S>) s).array[i]))
+		for (int i = 0; i < size(); i++)
+			if (!array[i].equals(((Orologio<S>) s).array[i]))
 				return false;
-		
+
 		return true;
 	}
 

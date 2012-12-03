@@ -1,4 +1,4 @@
-package exceptions;
+package commons;
 
 @SuppressWarnings("serial")
 public class EccezioneStrutturaVuota extends RuntimeException {

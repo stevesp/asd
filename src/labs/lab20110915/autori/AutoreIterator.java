@@ -5,14 +5,14 @@ import java.util.Iterator;
 public class AutoreIterator implements Iterator<Autore> {
 
 	private Autori ref;
-	
+
 	private int cont;
-	
-	public AutoreIterator(Autori autori){
+
+	public AutoreIterator(Autori autori) {
 		this.ref = autori;
 		this.cont = 0;
 	}
-	
+
 	@Override
 	public boolean hasNext() {
 		return this.cont < this.ref.size;

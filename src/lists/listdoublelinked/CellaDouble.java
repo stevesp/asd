@@ -1,12 +1,11 @@
 package lists.listdoublelinked;
 
-
 class CellaDouble {
-	
+
 	Object elemento;
-	
-	PuntatoreDouble successivo; 
-	
+
+	PuntatoreDouble successivo;
+
 	PuntatoreDouble precedente;
 
 	/**
@@ -15,8 +14,8 @@ class CellaDouble {
 	public CellaDouble() {
 		successivo = precedente = null;
 	}
-	
-	public CellaDouble(Object e){
+
+	public CellaDouble(Object e) {
 		elemento = e;
 		successivo = precedente = null;
 	}

@@ -3,15 +3,15 @@ package labs.lab20110915.collaborazione;
 import java.util.Iterator;
 
 public class CollaborazioniIterator implements Iterator<Collaborazione> {
-	
+
 	private Collaborazioni c;
 	private int current;
 
-	public CollaborazioniIterator(Collaborazioni c){
+	public CollaborazioniIterator(Collaborazioni c) {
 		this.current = 0;
 		this.c = c;
 	}
-	
+
 	@Override
 	public boolean hasNext() {
 		return this.current < this.c.archi.length;

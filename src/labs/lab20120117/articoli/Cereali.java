@@ -4,5 +4,5 @@ public class Cereali extends Alimenti {
 
 	public Cereali() {
 	}
-	
+
 }

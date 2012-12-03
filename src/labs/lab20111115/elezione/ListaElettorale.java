@@ -4,27 +4,27 @@ import java.util.List;
 
 public class ListaElettorale implements Comparable<ListaElettorale> {
 
-	public ListaElettorale(String nome, List<String> candidati){
+	public ListaElettorale(String nome, List<String> candidati) {
 		this.nome = nome;
 		this.candidati = candidati;
 	}
-	
-	public String nomeLista(){
+
+	public String nomeLista() {
 		return this.nome;
 	}
-	
-	public List<String> candidati(){
+
+	public List<String> candidati() {
 		return this.candidati;
 	}
-	
+
 	public int compareTo(ListaElettorale o) {
 		return o.nome.compareToIgnoreCase(this.nome);
 	}
-		
-	public String toString(){
+
+	public String toString() {
 		return this.nome.toUpperCase();
 	}
-	
+
 	private String nome;
 	private List<String> candidati;
 }

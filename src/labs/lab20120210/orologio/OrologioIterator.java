@@ -18,13 +18,13 @@ public class OrologioIterator<S> implements Iterator<S> {
 	}
 
 	@Override
-	public S next() {		
+	public S next() {
 		return orologio.array[current++];
 	}
 
 	@Override
-	public void remove() throws UnsupportedOperationException{
-		throw new UnsupportedOperationException();		
+	public void remove() throws UnsupportedOperationException {
+		throw new UnsupportedOperationException();
 	}
 
 }

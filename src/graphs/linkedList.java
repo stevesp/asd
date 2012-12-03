@@ -3,7 +3,7 @@ package graphs;
 import java.util.LinkedList;
 
 public class linkedList implements Lista {
-	
+
 	LinkedList<Object> lista = new LinkedList<Object>();
 
 	@Override

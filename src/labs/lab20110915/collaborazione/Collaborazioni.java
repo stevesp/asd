@@ -8,138 +8,138 @@ import java.util.Set;
 import labs.lab20110915.autori.Autore;
 import labs.lab20110915.autori.Autori;
 
-public class Collaborazioni implements Iterable<Collaborazione>{
+public class Collaborazioni implements Iterable<Collaborazione> {
 
-	Autore[] nodi = new Autore[0]; 
+	Autore[] nodi = new Autore[0];
 	Collaborazione[] archi = new Collaborazione[0];
-	
-	public Collaborazioni() { 
+
+	public Collaborazioni() {
 	}
-	
-	public void aggiungiColl(Autori autori, String titolo, int anno){
-		for(Autore a:autori)
-			if(!presente(a))
+
+	public void aggiungiColl(Autori autori, String titolo, int anno) {
+		for (Autore a : autori)
+			if (!presente(a))
 				add(a);
-		
-		for(Autore a:autori)
-			for(Autore b:autori){
+
+		for (Autore a : autori)
+			for (Autore b : autori) {
 				try {
 					Collaborazione c = new Collaborazione(a, b, titolo, anno);
 					if (!presente(c))
 						add(c);
-				} catch(EccezioneAnnoNonValido e){
+				} catch (EccezioneAnnoNonValido e) {
 					throw e;
-				} catch(EccezioneStessoAutore e){
+				} catch (EccezioneStessoAutore e) {
 					System.out.println(e);
 				}
 			}
 	}
-	
+
 	private boolean presente(Collaborazione collaborazione) {
 		try {
-			for(Collaborazione c:this.archi)
-				if(c.compareTo(collaborazione) == 0)
+			for (Collaborazione c : this.archi)
+				if (c.compareTo(collaborazione) == 0)
 					return true;
-		} catch(EccezioneStessoAutore e) {
-		} catch(EccezioneAnnoNonValido e) {
+		} catch (EccezioneStessoAutore e) {
+		} catch (EccezioneAnnoNonValido e) {
 		}
-		
+
 		return false;
 	}
 
 	private boolean presente(Autore autore) {
-		for(Autore a:this.nodi)
-			if(a.compareTo(autore) == 0 )
+		for (Autore a : this.nodi)
+			if (a.compareTo(autore) == 0)
 				return true;
-		
+
 		return false;
 	}
 
 	private void add(Collaborazione collaborazione) {
 		this.archi = Arrays.copyOf(this.archi, this.archi.length + 1);
-		
-		this.archi[this.archi.length-1] = collaborazione;
+
+		this.archi[this.archi.length - 1] = collaborazione;
 	}
-	
+
 	private void add(Autore autore) {
 		this.nodi = Arrays.copyOf(this.nodi, this.nodi.length + 1);
-		
-		this.nodi[this.nodi.length-1] = autore;
+
+		this.nodi[this.nodi.length - 1] = autore;
 	}
-	
-	public Autori collaboratori(Autore autore){
-		
+
+	public Autori collaboratori(Autore autore) {
+
 		if (!presente(autore))
 			throw new AutoreNonEsistenteException();
-		
+
 		Autori collaboratori = new Autori();
-	
-		for(Collaborazione c : this.archi)
-			if(c.autoreA.compareTo(autore) == 0)
+
+		for (Collaborazione c : this.archi)
+			if (c.autoreA.compareTo(autore) == 0)
 				collaboratori.add(c.autoreB);
-	
+
 		return collaboratori;
 	}
-	
-	public int numAutori(){
+
+	public int numAutori() {
 		return this.nodi.length;
 	}
-	
-	public int numCollaborazioni(){
+
+	public int numCollaborazioni() {
 		Set<String> setArticoli = new HashSet<String>();
-		
+
 		for (Collaborazione c : this.archi)
-			setArticoli.add(c.titolo +" "+ c.anno);
-		
+			setArticoli.add(c.titolo + " " + c.anno);
+
 		return setArticoli.size();
 	}
-	
-	public boolean collaborano(Autori autori){
-		for(Autore a : autori){
+
+	public boolean collaborano(Autori autori) {
+		for (Autore a : autori) {
 			Autori adiacenti = collaboratori(a);
 			adiacenti.add(a);
-			
-			if(!incluso(adiacenti, autori))
+
+			if (!incluso(adiacenti, autori))
 				return false;
 		}
-		
+
 		return true;
 	}
 
 	private boolean incluso(Autori adiacenti, Autori autori) {
-		for(Autore a : autori)
+		for (Autore a : autori)
 			if (!presente(a))
 				throw new AutoreNonEsistenteException();
-		
-		for(Autore a : autori){
-			for(Autore b : adiacenti){
-				if(a.compareTo(b) != 0)
+
+		for (Autore a : autori) {
+			for (Autore b : adiacenti) {
+				if (a.compareTo(b) != 0)
 					return false;
 			}
 		}
-		
+
 		return true;
 	}
 
-	public Autori autori(String titolo, int anno){
+	public Autori autori(String titolo, int anno) {
 		Autori autori = new Autori();
-		
-		for(Collaborazione c : this.archi)
-			if((c.titolo.compareTo(titolo) == 0) && c.anno == anno)
+
+		for (Collaborazione c : this.archi)
+			if ((c.titolo.compareTo(titolo) == 0) && c.anno == anno)
 				autori.add(c.autoreA);
-		
+
 		return autori;
 	}
-	
-	public boolean incluso(Collaborazioni collaborazione){
-		for(Autore a : this.nodi)
-			if(!collaborazione.presente(a))
+
+	public boolean incluso(Collaborazioni collaborazione) {
+		for (Autore a : this.nodi)
+			if (!collaborazione.presente(a))
 				return false;
-		
-		for(Collaborazione c : this.archi)
-			if(!collaborazione.presente(c))
+
+		for (Collaborazione c : this.archi)
+			if (!collaborazione.presente(c))
 				return false;
-				
+
 		return true;
 	}
 

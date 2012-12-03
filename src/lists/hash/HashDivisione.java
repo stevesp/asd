@@ -1,6 +1,5 @@
 package lists.hash;
 
-
 public class HashDivisione implements Hash {
 
 	@Override

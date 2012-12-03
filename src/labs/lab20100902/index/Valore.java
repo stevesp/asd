@@ -4,7 +4,7 @@ public class Valore implements Comparable<Valore> {
 
 	private String parola;
 	private int linea;
-	
+
 	public Valore(String parola, int linea) {
 		this.parola = parola;
 		this.linea = linea;
@@ -22,9 +22,9 @@ public class Valore implements Comparable<Valore> {
 	public int compareTo(Valore v) {
 		return this.parola.compareToIgnoreCase(v.parola);
 	}
-	
+
 	@Override
 	public String toString() {
-		return this.parola+", "+this.linea;
+		return this.parola + ", " + this.linea;
 	}
 }

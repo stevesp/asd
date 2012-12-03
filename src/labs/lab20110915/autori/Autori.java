@@ -7,31 +7,31 @@ public class Autori implements Iterable<Autore> {
 
 	Autore[] data;
 	int size;
-	
-	public Autori(){
+
+	public Autori() {
 		this.data = new Autore[1];
 		this.size = 0;
 	}
-	
-	public void add(Autore a) throws AutoreGiaPresenteException{
+
+	public void add(Autore a) throws AutoreGiaPresenteException {
 		int i = 0;
-		
-		for(i = 0; i < size; i++){
+
+		for (i = 0; i < size; i++) {
 			if (data[i].compareTo(a) == 0)
 				throw new AutoreGiaPresenteException();
-			
+
 			if (data[i].compareTo(a) > 0)
 				break;
 		}
-		
-		for(int j = size; j > i; j--)
-			data[j] = data[j-1];
+
+		for (int j = size; j > i; j--)
+			data[j] = data[j - 1];
 		data[i] = a;
-		
+
 		size++;
-		
+
 		if (size == data.length)
-			data = Arrays.copyOf(data, size*2);
+			data = Arrays.copyOf(data, size * 2);
 	}
 
 	@Override

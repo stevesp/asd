@@ -4,25 +4,25 @@ import java.util.Arrays;
 
 import labs.lab20110614.strutturadati.AddOnlyQueue;
 
-public class Quesito<T> implements AddOnlyQueue<T>{
+public class Quesito<T> implements AddOnlyQueue<T> {
 
 	public String quesito;
 	private T[] elementData;
 	private int size;
-	
-	public Quesito(){
+
+	public Quesito() {
 		this.elementData = (T[]) new Object[1];
 		this.size = 0;
 	}
-	
+
 	@Override
 	public void add(T dato) {
 		elementData[size++] = dato;
-		elementData = Arrays.copyOf(elementData, size+1);
+		elementData = Arrays.copyOf(elementData, size + 1);
 	}
-	
-	private void rangeCheck(int i){
-		if ( i >= size || i < 0)
+
+	private void rangeCheck(int i) {
+		if (i >= size || i < 0)
 			throw new IndexOutOfBoundsException();
 	}
 
@@ -37,16 +37,16 @@ public class Quesito<T> implements AddOnlyQueue<T>{
 		return size;
 	}
 
-	public String toString(){
+	public String toString() {
 		StringBuffer buffer = new StringBuffer();
-		
-		buffer.append("quesito: "+ quesito +"\n");
-		buffer.append("numero voti: "+ numberElements() +"\n");
+
+		buffer.append("quesito: " + quesito + "\n");
+		buffer.append("numero voti: " + numberElements() + "\n");
 		buffer.append("[ ");
-		
+
 		for (int i = 0; i < size; i++)
-			buffer.append(elementData[i]+" ");
-		
+			buffer.append(elementData[i] + " ");
+
 		return buffer.toString() + " ]";
 	}
 }

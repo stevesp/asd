@@ -8,37 +8,37 @@ public class WOListLinked implements ListaOrdinata {
 
 	private Puntatore inizioLista = null;
 	private int size;
-	
+
 	public WOListLinked() {
 		this.size = 0;
 	}
-	
+
 	@Override
 	public void insert(Comparable e) {
 		Puntatore _new = new Puntatore(new Cella(e));
-		
+
 		if (this.isEmpty())
 			inizioLista = _new;
 		else {
 			Puntatore tmp, q = inizioLista;
 
-			for(tmp = inizioLista; tmp.link.successivo != null; tmp = tmp.link.successivo) {
+			for (tmp = inizioLista; tmp.link.successivo != null; tmp = tmp.link.successivo) {
 				if (_new.link.elemento.compareTo(tmp.link.elemento) == 0)
 					throw new EccezioneElementoPresente("Elemento già presente");
-				
+
 				if (_new.link.elemento.compareTo(tmp.link.elemento) < 0)
 					break;
-				
+
 				q = tmp;
 			}
-			
+
 			_new.link.successivo = tmp;
 			if (inizioLista == q)
 				inizioLista = _new;
 			else
 				q.link.successivo = _new;
 		}
-		
+
 		size++;
 	}
 

@@ -6,6 +6,6 @@ public class EccezioneArchiInesistenti extends RuntimeException {
 		super(string);
 	}
 
-	public EccezioneArchiInesistenti(){
+	public EccezioneArchiInesistenti() {
 	}
 }

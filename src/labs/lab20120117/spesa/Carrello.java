@@ -8,26 +8,27 @@ public class Carrello implements AddOnlyList<Item>, Iterable<Item> {
 
 	private Record dummy;
 	private Direction direction = null;
-	
+
 	private class Record {
 		Item elem;
 		Record next, prev;
-		
+
 		Record(Item e) {
 			this.elem = e;
 			this.next = this.prev = this;
 		}
 	}
-	
+
 	public Carrello() {
 		this.dummy = new Record(null);
 	}
-	
+
 	@Override
 	public Iterator<Item> iterator() {
 		if (direction == null)
-			throw new EccezioneDirezioneNonImpostata("Bisogna impostare la direzione FORWARD o BACKWARD");
-		
+			throw new EccezioneDirezioneNonImpostata(
+					"Bisogna impostare la direzione FORWARD o BACKWARD");
+
 		return new CarrelloIterator();
 	}
 
@@ -44,29 +45,29 @@ public class Carrello implements AddOnlyList<Item>, Iterable<Item> {
 	@Override
 	public void add(Item e) {
 		Record _new = new Record(e);
-		
+
 		dummy.prev.next = _new;
 		_new.prev = dummy.prev;
 		_new.next = dummy;
 		dummy.prev = _new;
 	}
-	
+
 	private class CarrelloIterator implements Iterator<Item> {
 
 		private Record current;
-		
+
 		private final Direction dir;
 
 		public CarrelloIterator() {
 			this.dir = direction;
 			this.current = dummy;
 		}
-		
+
 		@Override
 		public boolean hasNext() {
 			boolean value = false;
-			
-			switch(dir){
+
+			switch (dir) {
 			case FORWARD:
 				value = current.next != dummy;
 				break;
@@ -81,10 +82,10 @@ public class Carrello implements AddOnlyList<Item>, Iterable<Item> {
 		}
 
 		@Override
-		public Item next() {			
-			switch(dir){
+		public Item next() {
+			switch (dir) {
 			case FORWARD:
-				current = current.next; 
+				current = current.next;
 				break;
 			case BACKWARD:
 				current = current.prev;
@@ -92,7 +93,7 @@ public class Carrello implements AddOnlyList<Item>, Iterable<Item> {
 			default:
 				throw new IllegalArgumentException();
 			}
-			
+
 			return current.elem;
 		}
 

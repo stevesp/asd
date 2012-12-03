@@ -6,24 +6,24 @@ public abstract class Frazione {
 
 	private String nome;
 	private Event evento;
-	
+
 	public Frazione(String nome, Event evento) {
 		this.nome = nome;
 		this.evento = evento;
 	}
-	
-	public String getName(){
+
+	public String getName() {
 		return this.nome;
 	}
-	
-	public Event getEvent(){
+
+	public Event getEvent() {
 		return this.evento;
 	}
-	
-	public void setEvent(Event evento){
+
+	public void setEvent(Event evento) {
 		this.evento = evento;
 	}
-	
+
 	@Override
 	public String toString() {
 		return nome;
@@ -50,6 +50,5 @@ public abstract class Frazione {
 			return false;
 		return true;
 	}
-	
-	
+
 }

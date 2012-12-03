@@ -6,7 +6,7 @@ public class ListaEsistente extends RuntimeException {
 		super();
 	}
 
-	public ListaEsistente(String e){
+	public ListaEsistente(String e) {
 		super(e);
 	}
 }

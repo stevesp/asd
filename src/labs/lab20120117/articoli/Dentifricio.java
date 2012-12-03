@@ -4,5 +4,5 @@ public class Dentifricio extends Igiene {
 
 	public Dentifricio() {
 	}
-	
+
 }

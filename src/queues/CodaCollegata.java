@@ -1,22 +1,22 @@
 package queues;
 
-import exceptions.EccezioneStrutturaVuota;
+import commons.EccezioneStrutturaVuota;
 
 public class CodaCollegata implements Coda {
 
 	private Record inizio = null;
 	private Record fine = null;
-	
-	private class Record {
- 		public Object elem;
- 		public Record next;
 
- 		public Record(Object e) {
+	private class Record {
+		public Object elem;
+		public Record next;
+
+		public Record(Object e) {
 			this.elem = e;
 			this.next = null;
 		}
 	}
-	
+
 	@Override
 	public boolean isEmpty() {
 		return this.inizio == null;
@@ -36,7 +36,7 @@ public class CodaCollegata implements Coda {
 	public Object first() throws EccezioneStrutturaVuota {
 		if (isEmpty())
 			throw new EccezioneStrutturaVuota("Coda vuota");
-		
+
 		return this.inizio.elem;
 	}
 
@@ -44,7 +44,7 @@ public class CodaCollegata implements Coda {
 	public void dequeue() throws EccezioneStrutturaVuota {
 		if (isEmpty())
 			throw new EccezioneStrutturaVuota("Coda vuota");
-		
+
 		this.inizio = this.inizio.next;
 	}
 

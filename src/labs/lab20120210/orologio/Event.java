@@ -1,9 +1,9 @@
 package labs.lab20120210.orologio;
 
 public class Event {
-	
+
 	private String evento;
-	
+
 	public Event(String string) {
 		this.evento = string;
 	}
@@ -29,6 +29,5 @@ public class Event {
 			return false;
 		return true;
 	}
-	
 
 }
